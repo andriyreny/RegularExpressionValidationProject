@@ -1,7 +1,7 @@
-Instruction on how to use the app:
-Download sources and open the project with Visual Studio 2022(the project uses .NET 6). Run project. 
-Use the next parameters for the app testing: 
-•	strToValidate - parameter that contains text input to validate. 
+Instruction on how to use the app: 
+Download sources and open the project with Visual Studio 2022(the project uses .NET 6). Run project.  
+Use the next parameters for the app testing:  
+•	strToValidate - parameter that contains text input to validate.  
 •	minLength - a parameter that contains the value for validating minimum length in text input. 
 •	maxLenght - a parameter that contains a value for validating maximum length in text input. 
 •	specialCharacters - a parameter that contains a value for validating special characters in text input. 
