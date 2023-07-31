@@ -2,8 +2,10 @@
 
 namespace RegularExpressionValidationProject
 {
-    public class InputValidation
+    public static partial class InputValidation
     {
+        private static readonly RegexOptions regexOptions = RegexOptions.Compiled;
+
         public static bool ValidateInput(string strToValidate, int minLength, int maxLenght, string specialCharacters) 
         {
             if (string.IsNullOrEmpty(strToValidate))
@@ -11,9 +13,7 @@ namespace RegularExpressionValidationProject
                 return false;
             }
 
-            var validateGuidRegex = new Regex($"^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[{specialCharacters}])(?!.*[\\s]).{{{minLength},{maxLenght}}}$");
-
-            return validateGuidRegex.IsMatch(strToValidate);
+            return Regex.IsMatch(strToValidate, $"^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[{specialCharacters}])(?!.*[\\s]).{{{minLength},{maxLenght}}}$", regexOptions);
         }
     }
 }
