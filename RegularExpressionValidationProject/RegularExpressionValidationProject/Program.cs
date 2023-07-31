@@ -1,5 +1,8 @@
-﻿namespace RegularExpressionValidationProject
+﻿using System.Diagnostics.CodeAnalysis;
+
+namespace RegularExpressionValidationProject
 {
+    [ExcludeFromCodeCoverage]
     class Program
     {
         private const string SpecialCharacters = "!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~";
